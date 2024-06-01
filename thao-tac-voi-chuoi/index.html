@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #ccc;
+      padding: 30px;
+
+      ul li {
+        font-size: 24px;
+      }
+
+      h1 {
+        color: red;
+      }
+
+      h2 {
+        background-color: yellow;
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Dưới đây là các hàm dùng để thao tác với chuỗi thường dùng:</h1>
+      <ul>
+        <li>
+          <b><h2>indexOf()</h2></b> Tìm kiếm vị trí của chuỗi con trong chuỗi
+          cha. Nếu không tìm thấy trả về -1
+        </li>
+        <li>
+          <b><h2>lastIndexOf()</h2></b> Tìm kiếm vị trí cuối cùng của chuỗi. Ví
+          dụ có 2 từ giống nhau thì nó chỉ tìm thấy và lấy tk sau.
+        </li>
+        <li>
+          <b><h2>search()</h2></b> Như indexOf nhưng nó sử dụng regular
+          expression để tìm kiếm, thay vì tìm kiếm chuỗi con trực tiếp.
+        </li>
+        <li>
+          <b><h2>slice(start, end)</h2></b> Dùng để trích xuất 1 phần của chuỗi
+          mà không muốn thay đổi chuỗi gốc.
+        </li>
+        <li>
+          <b><h2>split()</h2></b> Chuyển đổi chuỗi thành mảng.
+        </li>
+        <li>
+          <b><h2>concat()</h2></b> Nối chuỗi lại với nhau.
+        </li>
+        <li>
+          <b><h2>replace()</h2></b> Thay thế một phần của chuỗi bằng chuỗi mới.
+          Có thể sử dụng biểu thức chính quy để tìm kiếm và thay thế tất cả.
+        </li>
+        <li>
+          <b><h2>trim(), trimStart(), trimEnd()</h2></b> Thay thế một phần của
+          chuỗi bằng chuỗi mới. Có thể sử dụng biểu thức chính quy để tìm kiếm
+          và thay thế tất cả.
+        </li>
+        <li>
+          <b><h2>charAt()</h2></b> Lấy kí tự tại một vị trí cụ thể trong chuỗi
+        </li>
+        <li>
+          <b><h2>charCodeAt()</h2></b> Lấy mã ASCII của một kí tự tại 1 vị trí
+          cụ thể
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    var myText = "Tinh dep trai, dep trai that su";
+    var myMessage = "Gion thoi";
+    // var index = string.indexOf("vl"); // -1
+    // var index = myText.slice(0, 5); // Tinh
+    var index = myText.charAt(0); // T
+    // var index = myText.charCodeAt(0); // 84
+    console.log("Index: ", index);
+  </script>
+</html>
