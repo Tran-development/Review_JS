@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #ccc;
+      padding: 30px;
+
+      ul li {
+        font-size: 18px;
+      }
+
+      h1 {
+        color: red;
+      }
+
+      h2 {
+        background-color: yellow;
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Dưới đây là các hàm dùng để thao tác với mảng thường dùng:</h1>
+      <h3>Array khác với object là chỉ mục.</h3>
+      <h4>- Array chỉ mục là number và bắt đầu từ số 0.</h4>
+      <h4>- Object sử dụng name là index</h4>
+      <h4>Array là một kiểu dữ liệu tham chiếu. Lưu trữ nhiều giá trị trong 1 biến có thể gồm các phần tử như Number, boolean, string, obj, func, ... </h4>
+      <h4>Tạo mới arr: const arr = [...]; </h4>
+      <!-- Thêm -->
+      <h1>Có thể thêm phần tử vào array bằng nhiều cách </h1>
+      <ul>
+        <li>
+          <b><h2>arr = [] => arr[1] = "hello";</h2>
+        </li>
+        <li>
+          <b><h2>arr.push("world")</h2></b> 
+        </li>
+        <li>
+          <b><h2>arr.splice(start,deleteCount, item): xoá hoặc thêm mới</h2></b> Start: chỉ mục của ptu được thêm vào. deleteCount là ptu xoá từ chỉ mục đó. item là ptu được thêm vào
+        </li>
+        <li>
+          <b><h2>arr.unshift(item1, tem2, ...)</h2></b> Thêm ptu vào đầu mảng
+        </li>
+        <li>
+          <b><h2>arr.concat(value1, value2, ..., valueN)</h2></b> Nối chuỗi hay mảng đều được. TUY nhiên nó không làm thay đổi mảng/chuỗi gốc, nó tạo mới
+        </li>
+        <li>
+          <b><h2>spread: [...arr, newElement]</h2></b> Phân rã 1 mảng thành các ptu, rồi copy các ptu của mãng cũ sang mảng mới, k ảnh hưởng gì nhau
+        </li>
+      </ul>
+      <!-- Xoá -->
+      <h1>Các cách xoá phần tử trong mảng</h1>
+      <ul>
+        <li><b><h2>arr.pop()</h2></b>Xoá ptu cuối của mảng</li> 
+        <li><b><h2>arr.shift()</h2></b>Xoá ptu đầu của mảng</li> 
+        <li><b><h2>arr.filter(callback(element, index, arr), thisValue)</h2></b>Khác với forEach là nó sẽ tạo ra 1 bản mới để xử lý</li>
+        <li><b><h2>arr.push()</h2></b>Trả về độ dài mới của mảng</li>
+        <li><b><h2>delete arr[index]</h2></b>Dùng để xoá thì không tối ưu vì nó để lại giá trị undefined trong mảng</li>
+      </ul>
+      <h1>
+        =>  Các phương thức splice(), filter() và delete, push() sẽ thay đổi trực tiếp mảng ban đầu, trong khi pop() và shift() sẽ không chỉ xóa phần tử mà còn trả về phần tử đã xóa.
+      </h1>
+      <hr/>
+      <h1>Nối chuỗi, kiểm tra các điều kiện trên một mảng</h1>
+      <ul>
+        <li><b><h2>arr.join()</h2></b>Nối tất cả các ptu của mảng thành chuỗi</li> 
+        <li><b><h2>arr.flat(callback(currentValue, index, arr), thisArg)</h2></b>Nối mảng con với phân tử trong mảng lớn thành 1 mảng mới</li> 
+        <li><b><h2>flatMap: kết hợp của map và flat</h2></b>Nó là kiểu map xong rồi tới flat() có độ sâu là 1 (arr.map(..args).flat())</li> 
+        <li><b><h2>every vs some</h2></b>SOME => 1 điều kiện đúng => true. EVERY => 1 đk sai => false. Tức là every sẽ kiểm tra xem tất cả các ptu trong mảng có thoả mãn 1 đk nào đó không. Còn SOME thì chỉ kiểm tra xem có ít nhất có 1 ptu thoả mãn hay không</li> 
+        <li><b><h2>includes()</h2></b>Kiểm tra xem mảng có chứa ptu đó hay không</li> 
+      </ul>
+    </div>
+  </body>
+  <script>
+  //  const arr = ["hello", "bye", "see you"];
+   const myNumber = [3, 6, 7, 10, 15, 20, 30, 40, 50];
+
+  //  console.log(arr.splice(1,1, "da them"));
+  // let newArr = [...arr, "hi"]
+  //  console.log(arr.concat(4, "5"));
+  //  console.log(newArr[1]);
+  // console.log(myNumber.every(checkAge));
+  // arr.filter((value, index) => console.log("Lap forEach ", value));
+
+  // function checkAge(age) {
+  //   return age > 10;
+  // }
+
+  // console.log([1,2,3, 5].includes(6));
+
+  //find = findIndex lặp các phần tử trong mảng trả  về phần tử đầu tiên trong mảng được cung cấp thỏa mãn chức năng kiểm tra. 
+  // findLast = findLastIndex chả về phần tử cuooisc cùng
+  
+  // const found = myNumber.findIndex((element) => element > 10);
+  // console.log("dùng find:", found); // trả về phần tử 12 vì phần tử đầu tiên thỏa mãn điều kiện đầu tiên 
+
+  let doubleNumbers = myNumber.flatMap(num => [num, num *2])
+  console.log(doubleNumbers);
+
+  const myString = "Hello, I'm Tinh"
+
+  console.log(myString.trimStart());
+  </script>
+</html>
